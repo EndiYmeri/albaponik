@@ -1,0 +1,58 @@
+/*!
+Theme Name: Albaponik
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html#albaponik {
+    margin: 0 !important;
+}
+
+.top-bar svg,
+footer .contact {
+    height: 20px;
+    fill: #369edc;
+}
+
+header nav div ul.menu {
+    gap: 5px;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+header nav div ul.menu li {
+    padding: 5px 7px;
+}
+
+header nav div ul.menu li.menu-item-has-children {
+    position: relative;
+}
+
+header nav div ul.menu li.menu-item-has-children:hover .sub-menu {
+    display: block;
+}
+header nav div ul.menu li.menu-item-has-children .sub-menu:hover {
+    display: block;
+}
+
+header nav div ul.menu li .sub-menu {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    display: none;
+    width: max-content;
+    background-color: white;
+}
+.pll-parent-menu-item .sub-menu {
+    background-color: white;
+}
+.pll-parent-menu-item a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
