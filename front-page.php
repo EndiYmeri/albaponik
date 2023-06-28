@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-    <section class="hero-section h-[70vh] relative overflow-hidden">
+    <section class="hero-section h-[30vh] md:h-[50vh] lg:h-[70vh] relative overflow-hidden">
         <video autoplay muted class="w-full absolute -z-10 brightness-50">
             <source src="<?php bloginfo(
                 "template_url"
@@ -11,11 +11,11 @@
             <div class="h-full grid place-content-center">
                 <?php while (have_rows("banner")):
                     the_row(); ?>
-                         <h1 class="uppercase  text-zinc-50 text-6xl text-center font-bold">
+                         <h1 class="uppercase  text-zinc-50 text-2xl md:text-4xl lg:text-6xl text-center font-bold">
                     <?php echo the_sub_field("banner_title"); ?>
                     <!-- Jemi ne mision -->
                 </h1>
-                <p class="font-bold text-zinc-50 text-xl text-center ">
+                <p class="font-bold text-zinc-50 text-base md:text-lg lg:text-xl text-center ">
                     <?php echo the_sub_field("banner_subtitle"); ?>
                     <!-- Punojme per nje te ardhme te qendrueshme -->
                 </p>
@@ -40,57 +40,57 @@
         ?>
     
 
-        <section class="mission py-24 md:py-12 sm:py-6">
+        <section class="mission py-6 md:py-12 lg:py-24">
             <div class="container">
-                <h1 class="uppercase my-2 text-6xl text-center font-bold text-blue">
+                <h1 class="uppercase my-2 text-4xl md:text-5xl lg:text-6xl text-center font-bold text-blue">
                     <?php echo $iconsTitle; ?>
                     <!-- Misioni i se ardhmes -->
                 </h1>
-                <p class="text-center text-2xl py-8"> 
+                <p class="text-center text-xl md:text-2xl py-8"> 
                     <?php echo $iconsSubtitle; ?>
                     <!-- Nëpërmjet zhvillimit dhe ofrimit të zgjidhjeve dhe teknologjive ne zgjidhim problemet e bujqësisë. -->
                 </p>
             </div>
         </section>
-        <section class="icons py-10">
-            <div class="container mx-auto grid grid-cols-2 gap-24 mb-7">
-                <div class="icon-box max-w-[400px] justify-self-end"><div class="icon">
-                    <img class="w-[150px] ml-auto"  src="<?php bloginfo(
+        <section class="icons py-6 md:py-10">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mb-7">
+                <div class="icon-box max-w-[400px] justify-self-center md:justify-self-end"><div class="icon">
+                    <img class="w-[100px] md:w-[150px] mx-auto md:mr-0"  src="<?php bloginfo(
                         "template_url"
                     ); ?>/assets/agenti-chimici.png" alt="">
                     </div>
-                    <p class="text-2xl text-right">
+                    <p class="text-xl md:text-2xl text-center md:text-right">
                         <?php echo $firstIconText; ?>
                         <!-- Ne reduktojmë përdorimin e agjentëve kimikë dhe pesticideve në kulturat bujqësore. -->
                     </p>
                 </div>
-                <div class="icon-box max-w-[400px] justify-self-start"><div class="icon">
-                    <img class="w-[150px] mr-auto" src="<?php bloginfo(
+                <div class="icon-box max-w-[400px] justify-self-center md:justify-self-start"><div class="icon">
+                    <img class="w-[100px] md:w-[150px] mx-auto md:ml-0" src="<?php bloginfo(
                         "template_url"
                     ); ?>/assets/sprechi-acqua.png" alt="">
                     </div>
-                    <p class="text-2xl text-left">
+                    <p class="text-xl md:text-2xl text-center md:text-left">
                         <?php echo $secondIconText; ?>
 
                         <!-- Ne reduktojmë mbetjet e ujit gjatë seancave të ujitjes.       -->
                     </p>
                 </div>
-                <div class="icon-box max-w-[400px] justify-self-end"><div class="icon">
-                    <img class="w-[150px] ml-auto" src="<?php bloginfo(
+                <div class="icon-box max-w-[400px] justify-self-center md:justify-self-end"><div class="icon">
+                    <img class="w-[100px] md:w-[150px] mx-auto md:mr-0" src="<?php bloginfo(
                         "template_url"
                     ); ?>/assets/agricoltura-di-precisione.png" alt="">
                     </div>
-                    <p class="text-2xl text-right">
+                    <p class="text-xl md:text-2xl text-center md:text-right">
                         <?php echo $thirdIconText; ?>
                         <!-- Ne promovojmë eko-qëndrueshmërinë dhe zhvillimin e bujqësisë precize në vend. -->
                     </p>
                 </div>
-                <div class="icon-box max-w-[400px] justify-self-start"><div class="icon">
-                    <img class="w-[150px] mr-auto" src="<?php bloginfo(
+                <div class="icon-box max-w-[400px] justify-self-center md:justify-self-start"><div class="icon">
+                    <img class="w-[100px] md:w-[150px] mx-auto md:ml-0" src="<?php bloginfo(
                         "template_url"
                     ); ?>/assets/tecnologia-agricoltura.png" alt="">
                     </div>
-                    <p class="text-2xl text-left">
+                    <p class="text-xl md:text-2xl text-center md:text-left">
                         <?php echo $fourthIconText; ?>
                         
                         <!-- Ne projektojmë dhe prodhojmë teknologji për bujqësinë 4.0. -->
@@ -108,7 +108,7 @@
     while (have_rows("about")):
         the_row(); ?>
     <section class="image-text py-10">
-        <div class="container mx-auto grid grid-cols-2">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center">
             <div class="block p-4 shadow-lg">
                 <img src="<?php echo get_sub_field("about_image"); ?>" alt="">
             </div>
@@ -138,8 +138,8 @@
     endwhile;
     ?>
     <section class="gallery py-6">
-        <div class="container">
-            <h2 class="text-3xl text-center font-bold py-8">
+        <div class="container mx-auto px-4 md:px-0">
+            <h2 class="text-xl md:text-2xl lg:text-3xl  text-center font-bold py-8">
             <?php echo the_field("gallery_title"); ?>
             <!-- Seleziona la categoria a cui appartieni ed inizia ad esplorare le nostre soluzioni, scopri come la nostra tecnologia può aiutarti a coltivare in modo efficace e sostenibile. -->
             </h2>

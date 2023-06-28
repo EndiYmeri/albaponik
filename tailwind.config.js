@@ -9,6 +9,7 @@ module.exports = {
             ...colors,
             blue: "#369edc",
             secondaryBlue: "#35979c",
+            lightblue: "#57c1c6",
             purple: "#7e5bef",
             pink: "#ff49db",
             orange: "#ff7849",
@@ -19,6 +20,7 @@ module.exports = {
             "gray-light": "#d3dce6",
             darkBack: "#383E45",
         },
+
         container: {
             center: true,
         },
