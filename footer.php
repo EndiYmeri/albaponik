@@ -37,3 +37,5 @@
         </div>
     </div>
 </footer>
+<script src="<?php bloginfo("template_url"); ?>/app.js"></script>
+</body>

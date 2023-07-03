@@ -40,7 +40,7 @@
         ?>
     
 
-        <section class="mission py-6 md:py-12 lg:py-24">
+        <section class="mission px-4 py-6 md:py-12 lg:py-24">
             <div class="container">
                 <h1 class="uppercase my-2 text-4xl md:text-5xl lg:text-6xl text-center font-bold text-blue">
                     <?php echo $iconsTitle; ?>
@@ -52,7 +52,7 @@
                 </p>
             </div>
         </section>
-        <section class="icons py-6 md:py-10">
+        <section class="icons px-4 py-6 md:py-10">
             <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 mb-7">
                 <div class="icon-box max-w-[400px] justify-self-center md:justify-self-end"><div class="icon">
                     <img class="w-[100px] md:w-[150px] mx-auto md:mr-0"  src="<?php bloginfo(
@@ -173,6 +173,20 @@ if (have_rows("gallery_tab")):
                 // Do something...
             endif; ?>
             </article>
+        </div>
+    </section>
+    <section id="contact-section">
+
+        <div class="contact-form w-11/12  max-w-[800px] mx-auto border-gray-light border rounded p-4">
+            <h3 class="text-2xl md:text-3xl text-center font-bold">
+                <?php echo get_field("contact_title"); ?>
+            </h3>
+            <p class="text-center">
+                <?php echo get_field("contact_subtitle"); ?>
+            </p>
+           <?php if (get_field("contact_form_shortcode")) {
+               echo do_shortcode(get_field("contact_form_shortcode"));
+           } ?>
         </div>
     </section>
     <section id="map-section">

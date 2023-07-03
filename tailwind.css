@@ -10,10 +10,6 @@ html#albaponik {
     margin: 0 !important;
 }
 
-.overflow-hidden {
-    overflow: hidden !important;
-}
-
 .top-bar svg {
     height: 20px;
     fill: #369edc;
@@ -31,16 +27,28 @@ header nav:not(.mobile) div ul.menu {
     align-items: center;
     background-color: white;
 }
+
 header nav.mobile {
     transform: translateX(-100%);
     transition: all ease-in 0.2s;
 }
 
-header nav.mobile div ul.menu {
+header nav.mobile div ul.menu li a {
+    font-size: 18px;
+    padding: 3px 10px;
+}
+header nav.mobile div ul.menu li {
+    padding: 3px 0;
+}
+header nav.mobile div ul.menu li.lang-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header nav.mobile.open {
     transform: translateX(0);
+    position: fixed;
 }
 
 header nav div ul.menu li a {
@@ -116,4 +124,42 @@ header nav div ul.menu li .sub-menu li:hover a {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.burger-button.open {
+    gap: 0;
+    position: fixed;
+}
+.burger-button .line {
+    transition: all ease-in 0.2s;
+}
+
+.burger-button .line1 {
+    transform: rotate(0);
+    margin-bottom: 0;
+}
+.burger-button .line3 {
+    transform: rotate(0);
+    margin-top: 0;
+}
+.burger-button .line2 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.burger-button.open .line1 {
+    transform: rotate(-45deg);
+    margin-bottom: -3px;
+}
+.burger-button.open .line3 {
+    transform: rotate(45deg);
+    margin-top: -3px;
+}
+.burger-button.open .line2 {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.burger-button.open .line {
+    background-color: white;
 }

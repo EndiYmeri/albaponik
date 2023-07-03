@@ -43,10 +43,22 @@
                 <path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg>
             +355 68 48 10 620    
         </a>
+      </div> 
+      <div id="burger-menu" class="absolute z-[51] right-4 burger-button md:hidden cursor-pointer grid gap-1.5">
+          <div class="line line1 w-[30px] bg-green h-[3px]"></div>
+          <div class="line line2 w-[30px] bg-green h-[3px]"></div>
+          <div class="line line3 w-[30px] bg-green h-[3px]"></div>
       </div>
-      <nav class="mobile open md:hidden absolute grid w-full h-screen pr-[25%] bg-gradient-to-r from-white from-75% to-transparent to-75% backdrop-blur z-50 top-0 left-0 bg-transparent place-content-center text-center">
-      <?php wp_nav_menu(["theme_location" => "header-menu"]); ?>
-      <div class="md:hidden social-links flex flex-row gap-4 my-7">
+      <nav id="mobile-menu" class="mobile md:hidden absolute grid w-full h-screen pr-[15%] bg-gradient-to-r from-white from-85% to-green to-85% backdrop-blur z-50 top-0 left-0 bg-transparent place-content-center text-center">
+      <div class="logo">
+        <a href="<?php echo site_url(); ?>">
+          <img  src="<?php bloginfo(
+              "template_url"
+          ); ?>/assets/logo.png" alt="" srcset="" class="max-h-[80px] mx-auto mb-5" >
+        </a>
+      </div>
+      <?php wp_nav_menu(["theme_location" => "mobile-menu"]); ?>
+      <div class="md:hidden social-links flex flex-row justify-center gap-4 my-7">
         <a target="_blank" href="www.facebook.com">
           <svg height="1em" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
         </a>
