@@ -11,7 +11,7 @@
                 ); ?>" type="image/"> 
                 <img src="<?php echo the_sub_field(
                     "banner_background_image"
-                ); ?>" alt="">
+                ); ?>" alt="" class="w-full object-cover">
             </picture>
         <?php else: ?>
             <video autoplay muted class="w-full absolute -z-10 brightness-50">
@@ -177,7 +177,7 @@ if (have_rows("gallery_tab")):
                     ?>
                             <a href="<?php echo $gallery_page_url; ?>">
                                 <div class="gallery-cat grid gap-4 justify-center py-6 shadow-md">
-                                    <img  src="<?php echo $gallery_image_url; ?>" alt="" class="h-[250px]">
+                                    <img  src="<?php echo $gallery_image_url; ?>" alt="" class="h-[250px] mx-auto">
                                     <h3 class="gallery-title text-2xl font-bold px-4">
                                         <?php echo $gallery_name; ?>
                                     </h3>
