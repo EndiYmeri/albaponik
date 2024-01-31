@@ -232,7 +232,7 @@ if (have_rows("gallery_tab")):
             ></div>
         </div>
         <?php  ?>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZfj4XaiQUIjiYkc4JbjOa3vV8DeOIQk0&callback=Function.prototype"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=&callback=Function.prototype"></script>
         <script type="text/javascript">
         (function( $ ) {
 
